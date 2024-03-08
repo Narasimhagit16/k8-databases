@@ -5,13 +5,13 @@ metadata:
   namespace: roboshop
   labels:
     app: mongodb 
-    project:  roboshop
+    project: roboshop
     tier: db
 spec:
   selector:
     matchLabels:
       app: mongodb 
-      project:  roboshop
+      project: roboshop
       tier: db
   serviceName: "mongodb"
   replicas: {{ .Values.statefulset.replicas }}
@@ -19,7 +19,7 @@ spec:
     metadata:
       labels:
         app: mongodb 
-        project:  roboshop
+        project: roboshop
         tier: db
     spec:
       containers:

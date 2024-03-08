@@ -5,7 +5,7 @@ metadata:
   namespace: roboshop
   labels:
     app: mongodb 
-    project:  roboshop
+    project: roboshop
     tier: db
 spec:
   ports:
@@ -15,5 +15,5 @@ spec:
   clusterIP: None
   selector:
     app: mongodb 
-    project:  roboshop
+    project: roboshop
     tier: db
