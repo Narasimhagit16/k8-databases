@@ -4,16 +4,16 @@ metadata:
   name: mongodb
   namespace: roboshop
   labels:
-    app: mongodb 
+    app: mongodb
     project: roboshop
     tier: db
 spec:
   ports:
   - protocol: TCP
-    port: 27017
-    targetport: 27017
+    port: 27017 #service-port
+    targetPort: 27017
   clusterIP: None
   selector:
-    app: mongodb 
+    app: mongodb
     project: roboshop
     tier: db
