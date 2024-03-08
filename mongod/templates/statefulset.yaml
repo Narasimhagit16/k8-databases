@@ -2,6 +2,11 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongodb
+  namespace: roboshop
+  labels:
+    app: mongodb 
+    project:  roboshop
+    tier: db
 spec:
   selector:
     matchLabels:
@@ -9,7 +14,7 @@ spec:
       project:  roboshop
       tier: db
   serviceName: "mongodb"
-  replicas: {{ .Values.statefulset.replicas}}
+  replicas: {{ .Values.statefulset.replicas }}
   template:
     metadata:
       labels:
@@ -17,10 +22,9 @@ spec:
         project:  roboshop
         tier: db
     spec:
-      terminationGracePeriodSeconds: 10
       containers:
       - name: mongodb
-        image: "narasimhapanthangi17/mongodb:{{.Values.statefulset.imageversion}}"
+        image: "narasimhapanthangi17/mongodb:{{ .Values.statefulset.imageversion }}"
         volumeMounts:
         - name: mongodb
           mountPath: /data/db 
