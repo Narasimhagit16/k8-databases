@@ -11,6 +11,10 @@ data:
       - roboshop-pod-reader
       userarn: arn:aws:iam::905418054758:user/eks-rbac-user
       username: eks-rbac-user
+    - groups:
+      - raheem
+      userarn: arn:aws:iam::905418054758:user/eks-rbac-user
+      username: eks-rbac-user
 kind: ConfigMap
 metadata:
   name: aws-auth
