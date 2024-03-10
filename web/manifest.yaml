@@ -106,7 +106,6 @@ data:
     }
 
     } 
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -133,7 +132,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: joindevops/web:v1
+        image: narasimhapanthangi17/web:v1
         imagePullPolicy: Always
         resources:
           requests:
@@ -204,7 +203,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: "roboshop.daws76s.online"
+  - host: "roboshop.nariops.online"
     http:
       paths:
       - pathType: Prefix
