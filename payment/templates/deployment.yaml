@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: payment
-        image: "narasimhapanthangi17/payment:{{ .Values.deployment.imageversion }}"
+        image: "joindevops/payment:{{ .Values.deployment.imageversion }}"
         imagePullPolicy: Always
         resources:
           requests:
