@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: shipping
-        image: "narasimhapanthangi17/shipping:{{ .Values.hpa.imageversion }}"
+        image: "narasimhapanthangi17/shipping:{{ .Values.deployment.imageversion }}"
         imagePullPolicy: Always
         resources:
           requests:
