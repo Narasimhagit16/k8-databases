@@ -25,6 +25,7 @@ spec:
       - name: payment
         image: "narasimhapanthangi17/payment:{{ .Values.deployment.imageversion }}"
         imagePullPolicy: Always
+        resources:
           requests:
             cpu: "50m"
             memory: "128Mi"
